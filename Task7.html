@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<form action="#">
+			<fieldset>
+				<label>Convert</label>
+				<input type="text" name="convert" id="conv"/>
+				<select name="first" id="firstSel">
+					<option value="kg" onclick="choose()">kg</option>
+					<option value="lb" onclick="choose()">lb</option>
+				</select>
+				<select name="second" id="secondSel">
+					<option value="lb" onclick="choose2()">lb</option>
+					<option value="kg" onclick="choose2()">kg</option>
+				</select>
+				<button type="button" onclick="Calculate()" >Calculate</button>
+				<p id="result"></p>
+			</fieldset>
+		</form>
+	</body>
+	<script>
+		function choose() {
+			if (firstSel.value === "kg") {
+				secondSel.value = "lb";
+			}
+			else {
+				secondSel.value = "kg";
+			}
+		}
+		function choose2() {
+			if (secondSel.value === "kg") {
+				firstSel.value = "lb";
+			}
+			else {
+				firstSel.value = "kg";
+			}
+		}
+		function Calculate() {
+			var res;
+			if (firstSel.value === "kg") {
+				res = conv.value * 2.20462262;
+			}
+			else {
+				res = conv.value * 0.45359237;
+			}
+			document.getElementById("result").innerHTML = res;
+		}
+	</script>
+	
+</html>

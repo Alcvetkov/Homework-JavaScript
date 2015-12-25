@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<img id="myPic" src="" alt="Random Picture">
+	</body>
+	<script>
+		var ran = Math.floor((Math.random() * 5) + 1);
+		
+		function getPicture(random) {
+			
+			switch (random) {
+				case 1 :
+					return 'images/1.jpg'
+				case 2:
+					return 'images/2.jpg';
+				case 3 :
+					return 'images/3.jpg';
+				case 4 :
+					return 'images/4.jpg';
+				case 5 :
+					return 'images/5.jpg';
+			}
+			
+			return '';
+		}
+		document.getElementById("myPic").src = getPicture(ran);
+		//backgroundImage = src('../images/' + getPicture(ran));
+	</script>
+</html>

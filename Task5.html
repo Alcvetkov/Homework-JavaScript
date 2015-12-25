@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<label>Radius</label> <br />
+		<input type="text" name="radius" id="radiusS"/><br />
+		<label>Volume</label><br />
+		<input type="text" name="valume" id="volumeS"/><br />
+		<button onclick="Volume()">Calculate</button>
+	</body>
+	<script>
+		function Volume() {
+			volumeS.value = ((3 * radiusS.value) * Math.PI * 4) / 3;
+		}
+	</script>
+</html>

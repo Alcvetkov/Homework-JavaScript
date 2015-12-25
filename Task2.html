@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+	<a href="">link</a>
+	<a href="">link</a>
+	<a href="">link</a>
+	<a href="">link</a>
+	<a href="">link</a>
+	<a href="">link</a>
+	<a href="">link</a>
+	<a href="">link</a>
+	<a href="">link</a>
+	<a href="">link</a>
+	<a href="">link</a>
+	<p id="result"></p>
+	</body>
+	<script>
+		var count = document.getElementsByTagName('a');
+		document.getElementById("result").innerHTML='The number of anchors is ' + count.length;
+		console.log(count.length);
+	</script>
+</html>
