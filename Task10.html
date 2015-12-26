@@ -5,24 +5,20 @@
 		<title>Insert title here</title>
 	</head>
 	<body>
-		<form action="addEmployee">
+		<form action="" onsubmit="return validateForm(this);">
 			<table>
 				<tr>
 					<td><label for="firstName">First Name:</label></td>
-					<td><input type="text" name="firstName"/></td>
+					<td><input type="text" name="firstName" required/></td>
 				</tr>
 				<tr>
 					<td><label for="lastName">Last Name:</label></td>
-					<td><input type="text" name="lastName"/></td>
-				</tr>
-				<tr>
-					<td><label for="title">Title:</label></td>
-					<td><input type="text" name="title" size="40"/></td>
+					<td><input type="text" name="lastName" required/></td>
 				</tr>
 				<tr>
 					<td><label>Title of Courtesy:</label></td>
 					
-					<td><input type="radio" value="mr" name="titleCourtesy" id="titleCourtesy_mr"/>
+					<td><input type="radio" value="mr" name="titleCourtesy" id="titleCourtesy_mr" checked/>
 					<label for="titleCourtesy_dr">Mr.</label>
 					
 					<input type="radio" value="mrs" name="titleCourtesy" id="titleCourtesy_mrs"/>
@@ -34,16 +30,16 @@
 				
 				<tr>
 					<td><label for="address">Address:</label></td>
-					<td><input type="text" name="address" size="50"/></td>
+					<td><input type="text" name="address" size="50" required/></td>
 				</tr>
 				<tr>
 					<td><label for="city">City:</label></td>
-					<td><input type="text" name="city"/></td>
+					<td><input type="text" name="city" required/></td>
 				</tr>
 				<tr>
 					<td><label for="country" >Country:</label></td>
 					<td><select name="country" id="countrySelect" onmousedown="otherCntr()">
-						<option value="1" >Albania</option>
+						<option value="1" selected >Albania</option>
 						<option value="2" >Afganistan</option>
 						<option value="3" >Belgia</option>
 						<option value="4" >Bulgaria</option>
@@ -64,15 +60,15 @@
 				</tr>
 				<tr>
 					<td><label for="homePhone">Home Phone:</label></td>
-					<td><input type="number" name="homePhone"/></td>
+					<td><input type="number" name="homePhone" required/></td>
 				</tr>
 				<tr>
 					<td><label for="pass">Password:</label></td>
-					<td><input type="password" name="pass"/></td>
+					<td><input type="password" name="pass" required/></td>
 				</tr>
 				<tr>
 					<td><label for="rePass">Repeat Password:</label></td>
-					<td><input type="password" name="rePass"/></td>
+					<td><input type="password" name="rePass" required/></td>
 				</tr>
 				<tr>
 					<td><button type="submit" name="submit">Register</button></td>
@@ -95,6 +91,17 @@
 				document.getElementById("chek").style.visibility = "hidden";
 				document.getElementById("chek2").style.visibility = "hidden";
 			}
+		}
+		
+		function validateForm(form) {
+			
+			if (form.pass.value == form.rePass.value) {
+				return true;
+			}
+			
+			alert('The password and the repeated password are not thew same.');
+			
+			return false;
 		}
 	</script>
 </html>
