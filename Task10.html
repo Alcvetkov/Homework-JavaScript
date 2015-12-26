@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<form action="addEmployee">
+			<table>
+				<tr>
+					<td><label for="firstName">First Name:</label></td>
+					<td><input type="text" name="firstName"/></td>
+				</tr>
+				<tr>
+					<td><label for="lastName">Last Name:</label></td>
+					<td><input type="text" name="lastName"/></td>
+				</tr>
+				<tr>
+					<td><label for="title">Title:</label></td>
+					<td><input type="text" name="title" size="40"/></td>
+				</tr>
+				<tr>
+					<td><label>Title of Courtesy:</label></td>
+					
+					<td><input type="radio" value="mr" name="titleCourtesy" id="titleCourtesy_mr"/>
+					<label for="titleCourtesy_dr">Mr.</label>
+					
+					<input type="radio" value="mrs" name="titleCourtesy" id="titleCourtesy_mrs"/>
+					<label for="titleCourtesy_mrs">Mrs.</label>
+					
+					<input type="radio" value="ms" name="titleCourtesy" id="titleCourtesy_ms"/>
+					<label for="titleCourtesy_ms">Ms.</label></td>
+				</tr>
+				
+				<tr>
+					<td><label for="address">Address:</label></td>
+					<td><input type="text" name="address" size="50"/></td>
+				</tr>
+				<tr>
+					<td><label for="city">City:</label></td>
+					<td><input type="text" name="city"/></td>
+				</tr>
+				<tr>
+					<td><label for="country" >Country:</label></td>
+					<td><select name="country" id="countrySelect" onmousedown="otherCntr()">
+						<option value="1" >Albania</option>
+						<option value="2" >Afganistan</option>
+						<option value="3" >Belgia</option>
+						<option value="4" >Bulgaria</option>
+						<option value="5" >Croatia</option>
+						<option value="6" >England</option>
+						<option value="7" >Finland</option>
+						<option value="8" >France</option>
+						<option value="9" >Germany</option>
+						<option value="10" >Greece</option>
+						<option value="11" >Hungary</option>
+						<option value="12" >Italy</option>
+						<option value="13" >Russia</option>
+						<option value="14" >USA</option>
+						<option value="o" >Other</option>
+					</select></td>
+					<td><label for="country2" id="chek">Enter Your Country:</label></td>
+					<td><input type="text" name="country2" id="chek2"/></td>
+				</tr>
+				<tr>
+					<td><label for="homePhone">Home Phone:</label></td>
+					<td><input type="number" name="homePhone"/></td>
+				</tr>
+				<tr>
+					<td><label for="pass">Password:</label></td>
+					<td><input type="password" name="pass"/></td>
+				</tr>
+				<tr>
+					<td><label for="rePass">Repeat Password:</label></td>
+					<td><input type="password" name="rePass"/></td>
+				</tr>
+				<tr>
+					<td><button type="submit" name="submit">Register</button></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+	<script>
+		document.getElementById("chek").style.visibility = "hidden";
+		document.getElementById("chek2").style.visibility = "hidden";
+		
+		function otherCntr() {
+			var cntr = document.getElementById("countrySelect");
+			
+			if (cntr.value == "o") {
+				document.getElementById("chek").style.visibility = "visible";
+				document.getElementById("chek2").style.visibility = "visible";
+			}
+			else {
+				document.getElementById("chek").style.visibility = "hidden";
+				document.getElementById("chek2").style.visibility = "hidden";
+			}
+		}
+	</script>
+</html>

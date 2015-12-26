@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style>
+			div {
+				width: 300px;
+				height: 250px;
+				background-repeat: no-repeat;
+				display: inline-block;
+			}
+			div img {
+				width: 300px;
+				height: 250px;
+			}
+		</style>
+	</head>
+	<body>		
+	
+		<img onmouseenter="bigImg(this)" onmouseleave="normalImg(this)" src="images/Banshee.png" alt="Banshee" width="300" height="250">
+		<img onmouseenter="bigImg(this)" onmouseleave="normalImg(this)" src="images/Ghost.png" alt="Ghost" width="300" height="250">
+		<img onmouseenter="bigImg(this)" onmouseleave="normalImg(this)" src="images/Marine.png" alt="Marine" width="300" height="250">
+		<img onmouseenter="bigImg(this)" onmouseleave="normalImg(this)" src="images/Reaper.png" alt="Reaper" width="300" height="250">
+		<img onmouseenter="bigImg(this)" onmouseleave="normalImg(this)" src="images/SCV.png" alt="SCV" width="300" height="250">
+		<img onmouseenter="bigImg(this)" onmouseleave="normalImg(this)" src="images/Thor.png" alt="Thor" width="300" height="250">
+	
+	</body>
+	<script>
+		function bigImg(x) {
+		    x.style.height = "600px";
+		    x.style.width = "497px";
+		}
+		
+		function normalImg(x) {
+		    x.style.height = "300px";
+		    x.style.width = "250px";
+		}
+	</script>
+</html>
